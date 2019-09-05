@@ -1,18 +1,35 @@
 import React,{useState} from 'react'
 import Display from './Display'
 const Dashboard = props => {
-    const[balls ,setBalls] =useState(0)
+ const[balls ,setBalls] =useState(0)
   const[strikes, setStrikes] =useState(0)
   const[outs,setOuts] =useState(0)
  console.log(balls,strikes,outs)
+ const resetBalls = () => setBalls(0)
+ const resetStrikes = () => setStrikes(0)
+const handleFoul = () => {
+    if (strikes != 2)return setStrikes(strikes +1)
+    else return strikes
+}
+ const handleBallClick = () =>{
+    if (balls != 3 ) return setBalls(balls + 1)
+    else return resetBalls()
+ } 
+     
+ const handleStrikeClick = () =>{
+     if (strikes != 2) return setStrikes(strikes +1)
+     else return resetStrikes()
+ }
+ const handleHit =()=> { return resetBalls(), resetStrikes()}
 return (
     <>
-     <Display balls={balls} strikes={strikes}  />
+     <Display balls={balls} strikes={strikes} outs={outs} />
     <div className='dashboard'>
        
-        <button name='balls'  onClick={ ()=>setBalls(balls +1) } placeholder='Balls'>Balls</button>
-        <button name='strikes'  onClick={ ()=>setStrikes(strikes +1) } placeholder="Strikes">Strikes</button>
-        <button name='hit'  onClick={ ()=>setOuts(outs + 1) } placeholder='Outs'>Hit</button>
+        <button name='balls'  onClick={ ()=> handleBallClick() } placeholder='Balls'>Balls</button>
+        <button name='strikes'  onClick={ () => handleStrikeClick() } placeholder="Strikes">Strikes</button>
+        <button name='hit'  onClick={ ()=> handleHit() } placeholder='Outs'>Hit</button>
+        <button name ='foul' onClick={ ()=> handleFoul()} placeHolder='Foul'>Foul</button>
     
 
     </div>
