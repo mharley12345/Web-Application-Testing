@@ -13,12 +13,12 @@ const handleFoul = () => {
 }
  const handleBallClick = () =>{
     if (balls != 3 ) return setBalls(balls + 1)
-    else return resetBalls()
+    else return setBalls(0)
  } 
      
  const handleStrikeClick = () =>{
      if (strikes != 2) return setStrikes(strikes +1)
-     else return resetStrikes()
+     else return setStrikes(0)
  }
  const handleHit =()=> { return resetBalls(), resetStrikes()}
 return (
@@ -29,7 +29,7 @@ return (
         <button name='balls'  onClick={ ()=> handleBallClick() } placeholder='Balls'>Balls</button>
         <button name='strikes'  onClick={ () => handleStrikeClick() } placeholder="Strikes">Strikes</button>
         <button name='hit'  onClick={ ()=> handleHit() } placeholder='Outs'>Hit</button>
-        <button name ='foul' onClick={ ()=> handleFoul()} placeHolder='Foul'>Foul</button>
+        <button name ='foul' onClick={ ()=> handleFoul()} placeholder='Foul'>Foul</button>
     
 
     </div>
