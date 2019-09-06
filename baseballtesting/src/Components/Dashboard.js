@@ -25,12 +25,15 @@ return (
     <>
      <Display balls={balls} strikes={strikes} outs={outs} />
     <div className='dashboard'>
-       
-        <button name='balls' className='balls' data-testid='balls-button'  onClick={ ()=> handleBallClick() } placeholder='Balls'>Balls</button>
-        <button name='strikes' className="strikes" data-testid='strikes-button' onClick={ () => handleStrikeClick() } placeholder="Strikes">Strikes</button>
-        <button name='hit' className="hits"data-testid='hit-button' onClick={ ()=> handleHit() } placeholder='Outs'>Hit</button>
-        <button name ='foul' className="fouls" data-testid='foul-button' onClick={ ()=> handleFoul()} placeholder='Foul'>Foul</button>
+    <button name ='foul' className="fouls" data-testid='foul-button' onClick={ ()=> handleFoul()} placeholder='Foul'>Foul</button>
+    <button name='hit' className="hits"data-testid='hit-button' onClick={ ()=> handleHit() } placeholder='Outs'>Hit</button>
+      <br/>
+      <button name='balls' className='balls-btn' data-testid='balls-button'  onClick={ ()=> handleBallClick() } placeholder='Balls'>Balls</button>
+     <br/> 
     
+      <br/>
+
+      <button name='strikes' className="strikes-btn" data-testid='strikes-button' onClick={ () => handleStrikeClick() } placeholder="Strikes">Strikes</button>
 
     </div>
     </>

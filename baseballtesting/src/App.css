@@ -31,3 +31,68 @@
     transform: rotate(360deg);
   }
 }
+.display {
+  max-width: 960px;
+  margin-left: 3rem;
+  display: flex;
+  flex-direction: row-reverse;
+  border:3px solid white;
+justify-content: space-between;
+background:green;
+margin-top:4rem;
+font-size: 22px
+}
+
+.outs{
+ border:2px red solid;
+ background: black;
+ color: whitesmoke;
+ width: 200px;
+
+}
+.strikes{
+  border:2px red solid;
+  background: black;
+  color: whitesmoke;
+  width: 200px;
+ 
+ 
+ }
+ .balls{
+  border:2px red solid;
+  background: black;
+  color: whitesmoke;
+  width: 200px;
+ 
+ 
+ }
+
+ .dashboard{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border:3px solid white;
+justify-content: space-around;
+max-width: 960px;
+background: black
+
+ }
+
+ .balls-btn{
+width: 200px;
+margin-left:6rem;
+border:2px white solid;
+background: green;
+
+color: whitesmoke;
+
+ }
+ .strikes-btn{
+  width: 200px;
+  margin-left:6rem;
+  border:2pxw white solid;
+  background:red;
+  color: whitesmoke;
+  width: 200px;
+ }
+ 
