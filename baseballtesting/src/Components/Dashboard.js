@@ -18,7 +18,8 @@ const handleFoul = () => {
      
  const handleStrikeClick = () =>{
      if (strikes != 2) return setStrikes(strikes +1)
-     else return setStrikes(0)
+     else if(strikes  == 2 && outs !=2) return setStrikes(0),setOuts(outs +1)
+     else return setStrikes(0), setOuts(0)
  }
  const handleHit =()=> { return resetBalls(), resetStrikes()}
 return (
