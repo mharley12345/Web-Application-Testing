@@ -4,7 +4,8 @@ const Display = props =>{
 
 
 return (
-<>
+< div className='display'>
+     Display
      <div className="strikes">
       <h2>Strikes:</h2>
       <div>{props.strikes}</div>
@@ -15,7 +16,7 @@ return (
      </div>
      <h2>Outs</h2>
      <div>{props.outs}</div>
-     </>
+  </ div>
 
 )
 }

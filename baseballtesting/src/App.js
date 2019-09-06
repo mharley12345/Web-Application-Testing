@@ -1,5 +1,5 @@
 import React from 'react';
-import Display  from './Components/Display'
+
 import Dashboard from './Components/Dashboard'
 import './App.css';
 

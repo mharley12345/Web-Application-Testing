@@ -1,23 +1,30 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import  { render } from "@testing-library/react"
-import App from './App';
+import React from "react";
+import { render , cleanup} from "@testing-library/react";
 
-import * as rtl from '@testing-library/react';
+import App from './App'
 
 
-// AAA - Arrange, Act, Assert
-test("contains Balls, Strikes", () => {
-  // Arrange
-  const { getByText } =render(<App />);
+afterEach(cleanup)
 
-  // Act - getting the node by text
-  getByText(/balls/i);
-  getByText(/strikes/i);
-  // Assertion is if ^^^ is truthy
-});
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+describe('<App />', ()=> {
+    it('App renders without crashing', () => {
+        render(<App/>)
+
+    })
+})
+describe('<Display />', () => {
+    it('Display renders without crashing', () => {
+      const wrapper = render(<App />)
+      expect(wrapper.getByText(/Display/i))
+    })
+  })
+
+  describe('<Dashboard />', () => {
+    it('Dashboard renders without crashing', () => {
+      const wrapper = render(<App />)
+      expect(wrapper.getByText(/Dashboard/i))
+    })
+  })
+
+
+

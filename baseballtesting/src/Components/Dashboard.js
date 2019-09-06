@@ -26,10 +26,10 @@ return (
      <Display balls={balls} strikes={strikes} outs={outs} />
     <div className='dashboard'>
        
-        <button name='balls'  onClick={ ()=> handleBallClick() } placeholder='Balls'>Balls</button>
-        <button name='strikes'  onClick={ () => handleStrikeClick() } placeholder="Strikes">Strikes</button>
-        <button name='hit'  onClick={ ()=> handleHit() } placeholder='Outs'>Hit</button>
-        <button name ='foul' onClick={ ()=> handleFoul()} placeholder='Foul'>Foul</button>
+        <button name='balls' className='balls' data-testid='balls-button'  onClick={ ()=> handleBallClick() } placeholder='Balls'>Balls</button>
+        <button name='strikes' className="strikes" data-testid='strikes-button' onClick={ () => handleStrikeClick() } placeholder="Strikes">Strikes</button>
+        <button name='hit' className="hits"data-testid='hit-button' onClick={ ()=> handleHit() } placeholder='Outs'>Hit</button>
+        <button name ='foul' className="fouls" data-testid='foul-button' onClick={ ()=> handleFoul()} placeholder='Foul'>Foul</button>
     
 
     </div>
